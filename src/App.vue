@@ -1,22 +1,34 @@
-<script setup>
-</script>
-
 <template>
-  <div>naive ui 组件</div>
-  <n-button>adsf</n-button>
+  <div>
+    <div ref="chart" style="width: 600px; height: 400px;"></div>
+    <n-button>按钮</n-button>
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script setup>
+import { ref, onMounted } from 'vue';
+import * as echarts from 'echarts';
+
+const chart = ref(null);
+
+onMounted(() => {
+  const myChart = echarts.init(chart.value);
+  myChart.setOption({
+    title: {
+      text: 'ECharts 入门示例'
+    },
+    tooltip: {},
+    xAxis: {
+      data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+    },
+    yAxis: {},
+    series: [
+      {
+        name: '销量',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+      }
+    ]
+  });
+});
+</script>
