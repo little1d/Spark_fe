@@ -12,7 +12,7 @@
       <div class="bg-green-200 p-4">Item 2</div>
       <div class="bg-yellow-200 p-4 font-bold">Item 3</div>
     </div>
-</template>
+</template> 
 
 <script setup>
 import { ref, onMounted } from 'vue';
