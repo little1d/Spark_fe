@@ -14,8 +14,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.16",
     "naive": "^0.0.0",
     "naive-ui": "^2.35.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
     "ui": "^0.2.4",
     "unplugin-auto-import": "^0.16.7",
     "unplugin-vue-components": "^0.25.2",
