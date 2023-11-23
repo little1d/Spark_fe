@@ -27,6 +27,6 @@ import SpHeader from "../../components/SpHeader.vue";
   gap: 2rem;
   background-color: #F8F7FC;
   border-radius: 25px;
-  box-shadow: 16px 16px 4px rgba(109, 141, 173, 0.15);
+  box-shadow: 0 16px 40px rgba(99, 160, 222, 0.4);
 }
 </style>
