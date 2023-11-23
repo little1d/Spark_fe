@@ -2,9 +2,6 @@
   <div class="container">
     <div class="left-box">
       <div class="imgBox">
-        <n-icon size="40">
-          <game-controller-outline />
-        </n-icon>
         <img src="@/assets/cat.png" class="">
       </div>
       <div class="goal"></div>
@@ -24,42 +21,43 @@ import SpSidebar from "@/components/SpSidebar.vue";
 </script>
 
 <style scoped>
-.container{
+.container {
+  width: 100%;
   display: flex;
   gap: 2rem;
 }
 
-.left-box{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.right-box{
+.left-box {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.imgBox{
+.right-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.imgBox {
   width: 510px;
   height: 312px;
   background-color: red;
 }
 
-.goal{
+.goal {
   width: 510px;
   height: 312px;
   background-color: yellow;
 }
 
-.checkIn{
+.checkIn {
   width: 450px;
   height: 160px;
   background-color: #646cff;
 }
 
-.trend{
+.trend {
   width: 450px;
   height: 530px;
   background-color: #242424;
