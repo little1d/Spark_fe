@@ -1,15 +1,15 @@
 <script setup>
+import {ArrowUpload16Regular} from "@vicons/fluent"
 
 </script>
 
 <template>
-  <div class="sidebar">
-    <div class="title">仪表盘</div>
-    <div class="menu">
+  <div class="container">
 
-    </div>
-    <div class="community-link">前往社区</div>
-  </div></template>
+    <n-icon><ArrowUpload16Regular/></n-icon>
+    <n-menu  />
+  </div>
+</template>
 
 <style scoped>
 

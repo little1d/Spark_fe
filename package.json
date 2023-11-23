@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^4.5.0",
     "echarts": "^5.4.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
@@ -23,7 +24,6 @@
     "@vicons/ionicons5": "^0.12.0",
     "@vicons/material": "^0.12.0",
     "@vicons/tabler": "^0.12.0",
-    "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.16",
     "naive": "^0.0.0",
     "naive-ui": "^2.35.0",
