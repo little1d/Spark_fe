@@ -4,10 +4,42 @@
         <div class="header">
             <img src="@/assets/AboutUs/logo.png" alt="" class="logo">
         </div>
+        <!-- 封面 -->
+        <div class="cover">
+            <img src="@/assets/Landing/running-woman.png" alt="" class="running-woman">
+            <img src="@/assets/Landing/heading.png" alt="" class="heading">
+            <img src="@/assets/Landing/decoration.png" alt="" class="decoration">
+        </div>
+        <!-- 产品介绍 -->
+        <div class="product">
+            <span class="EnglishTitle">product introduction</span>
+            <h3 class="ChineseTitle">产品介绍</h3>
+            <img src="@/assets/Landing/product.png" alt="" class="product-pic">
+            <div class="introduction">
+                <div class="point">
+                    <img src="@/assets/Landing/arrow.png" alt="" class="arrow">
+                    <p class="substance">这是一个集合了打卡、数据呈现，社区交流等功能为一体的运动激励产品。</p>
+                </div>
+                <div class="point">
+                    <img src="@/assets/Landing/arrow.png" alt="" class="arrow">
+                    <p class="substance">旨在帮助用户建立健康的运动习惯、激发内在动力，并与其他用户共同成长和互相支持。</p>
+                </div>
+            </div>
+        </div>
         <!-- 运动社区 -->
         <div class="community">
-            <img src="@/assets/Landing/dot.png" alt="" class="dot">
-            <img src="@/assets/Landing/community.png" alt="" class="community-pic">  
+            <div class="upper">
+                <img src="@/assets/Landing/dot.png" alt="" class="dot">
+                <img src="@/assets/Landing/community.png" alt="" class="community-pic">
+            </div>
+            <div class="lower">
+                <ul class="card">
+                    <li class="user"></li>
+                    <li class="user"></li>
+                    <li class="user"></li>
+                    <li class="user"></li>
+                </ul>  
+            </div>  
         </div>
         <!-- 创作理念 -->
         <div class="creat">
@@ -23,10 +55,14 @@
         </div>
         <!-- 页脚 -->
         <div class="footer">
-            <img src="@/assets/AboutUs/logo.png" alt="" class="logo">
-            <img src="@/assets/Landing/sparkSports.png" alt="" class="">
+            <img src="@/assets/AboutUs/logo.png" alt="" class="left">
+            <img src="@/assets/Landing/sparkSports.png" alt="" class="right">
         </div>
         <!-- 备案信息 -->
+        <div class="bottom">
+            <img src="@/assets/Landing/line.png" alt="" class="line">
+            <span class="filings">备案信息</span>
+        </div>
     </div>
 </template>
 
@@ -53,11 +89,85 @@
     height: 35px;
 }
 
+.cover {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+}
+.running-woman {
+    margin-top: 183px;
+    width: 366px;
+    height: 546px
+}
+.heading {
+    position: absolute;
+    margin: 250px 0 0 175px;
+    width: 889px;
+    z-index: 2;
+}
+.decoration {
+    position: absolute;
+    bottom: 200px;
+    left: 800px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 900px;   
+}
+.EnglishTitle {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    color: rgba(38, 150, 255, 1);
+}
+.ChineseTitle {
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    line-height: 70px;
+    color: rgba(39, 36, 68, 1);
+}
+.product-pic {
+    height: 140px;
+    width: 1411px;
+}
+.introduction {
+    width: 1411px;
+    height: 541px;
+    border-radius: 0px 0px, 32px, 32px;
+    background: rgba(229, 229, 229, 1);
+    box-shadow: 0px 10px 20px  rgba(0, 0, 0, 0.25);
+}
+.point {
+    display: flex;
+    margin-top: 120px;
+}
+.arrow {
+    margin: 0 50px 0 50px;
+    width: 72px;
+    height: 72px;
+}
+.substance {
+    font-size: 36px;
+    line-height: 52px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+}
+
 .community {
-display: flex;
-width: 100%;
-height: 904px;
-background: rgba(254, 229, 218, 0.48);
+    width: 100%;
+    height: 904px;
+    background: rgba(254, 229, 218, 0.48);
+}
+.upper {
+    display: flex;
 }
 .dot {
     margin-top: 100px;
@@ -68,11 +178,22 @@ background: rgba(254, 229, 218, 0.48);
     margin: 90px 0 0 50px;
     width: 716px;
     height: 93px;
-
+}
+.card {
+    display: flex;
+}
+.user {
+    margin: 100px 0 0 40px;
+    width: 316px;
+    height: 316px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 10px 20px  rgba(0, 0, 0, 0.25);
 }
 
 .creat {
     display: flex;
+    margin-top: 150px;
     width: 100%;
     height: 1050px;
     border-radius: 15px;
@@ -84,19 +205,45 @@ background: rgba(254, 229, 218, 0.48);
     height: 100px;
 }
 .title {
-font-size: 50px;
-font-weight: 900;
-letter-spacing: 1.4px;
-line-height: 120px;
-color: rgba(0, 0, 0, 1);
-text-align: left;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    line-height: 120px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
 }
 .content {
-margin: 40px 100px 40px 0;
-font-size: 24px;
-line-height: 35px;
-color: rgba(0, 0, 0, 1);
-text-align: left;
+    margin: 40px 100px 40px 0;
+    font-size: 24px;
+    line-height: 35px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+}
+.footer {
+    display: flex;
+    height: 400px;
+}
+.left {
+    margin: 150px 250px 0 100px ;
+    width: 220px;
+    height: 40px;
+}
+.right {
+    margin: 50px 0 0 0;
+    width: 920px;
+    height: 250px;
+}
 
+.bottom {
+    height: 100px;
+}
+.filings {
+    display: block;
+    margin: 100px 0 0 100px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
 }
 </style>
