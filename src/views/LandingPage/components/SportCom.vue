@@ -3,6 +3,12 @@
         <!-- 头部导航 -->
         <div class="header">
             <img src="@/assets/AboutUs/logo.png" alt="" class="logo">
+            <div>导航栏</div>
+            <a href="#"><div>个人中心</div></a>
+            <a href="#"><div>产品介绍</div></a>
+            <a href="#"><div>运动社区</div></a>
+            <a href="#"><div>登录</div></a>
+            <a href="#"><div>注册</div></a>
         </div>
         <!-- 封面 -->
         <div class="cover">
@@ -34,10 +40,86 @@
             </div>
             <div class="lower">
                 <ul class="card">
-                    <li class="user"></li>
-                    <li class="user"></li>
-                    <li class="user"></li>
-                    <li class="user"></li>
+                    <li class="user">
+                        <img src="@/assets/Landing/quotation.png" alt="" class="quotation">
+                        <div class="userInformation">
+                            <img src="@/assets/Landing/avatar.png" alt="" class="avatar">
+                            <div>
+                                <h4 class="name">Ar</h4>
+                                <span class="city">Miami,USA</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/assets/Landing/shortline.png" alt="" class="shortline">
+                        </div>
+                        <div class="evaluate">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/greystar.png" alt="" class="star">
+                        </div>
+                    </li>
+                    <li class="user">
+                        <img src="@/assets/Landing/quotation.png" alt="" class="quotation">
+                        <div class="userInformation">
+                            <img src="@/assets/Landing/avatar.png" alt="" class="avatar">
+                            <div>
+                                <h4 class="name">Ar</h4>
+                                <span class="city">Miami,USA</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/assets/Landing/shortline.png" alt="" class="shortline">
+                        </div>
+                        <div class="evaluate">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/greystar.png" alt="" class="star">
+                        </div>
+                    </li>
+                    <li class="user">
+                        <img src="@/assets/Landing/quotation.png" alt="" class="quotation">
+                        <div class="userInformation">
+                            <img src="@/assets/Landing/avatar.png" alt="" class="avatar">
+                            <div>
+                                <h4 class="name">Ar</h4>
+                                <span class="city">Miami,USA</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/assets/Landing/shortline.png" alt="" class="shortline">
+                        </div>
+                        <div class="evaluate">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/greystar.png" alt="" class="star">
+                        </div>
+                    </li>
+                    <li class="user">
+                        <img src="@/assets/Landing/quotation.png" alt="" class="quotation">
+                        <div class="userInformation">
+                            <img src="@/assets/Landing/avatar.png" alt="" class="avatar">
+                            <div>
+                                <h4 class="name">Ar</h4>
+                                <span class="city">Miami,USA</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="@/assets/Landing/shortline.png" alt="" class="shortline">
+                        </div>
+                        <div class="evaluate">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/redstar.png" alt="" class="star">
+                            <img src="@/assets/Landing/greystar.png" alt="" class="star">
+                        </div>
+                    </li>
                 </ul>  
             </div>  
         </div>
@@ -56,7 +138,24 @@
         <!-- 页脚 -->
         <div class="footer">
             <img src="@/assets/AboutUs/logo.png" alt="" class="left">
-            <img src="@/assets/Landing/sparkSports.png" alt="" class="right">
+            <div class="right">
+                <ul class="part">
+                    <li>
+                        <h5>公益与愿景</h5>
+                    </li>
+                    <li>
+                        <h5>Company</h5>
+                    </li>
+                    <li>
+                        <h5>关于我们</h5>
+                        <span>联系我们</span>
+                    </li>
+                    <li>
+                        <h5>其他</h5>
+                        <span>用户协议<br>隐私政策</span>
+                    </li>
+                </ul>
+            </div>
         </div>
         <!-- 备案信息 -->
         <div class="bottom">
@@ -77,6 +176,7 @@
 }
 
 .header {
+    display: flex;
     position: relative;
     width: 100%;
     height: 80px;
@@ -183,12 +283,60 @@
     display: flex;
 }
 .user {
+    position: relative;
     margin: 100px 0 0 40px;
     width: 316px;
     height: 316px;
     border-radius: 32px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 10px 20px  rgba(0, 0, 0, 0.25);
+    overflow: visible;
+}
+.quotation {
+    position: absolute;
+    left: 230px;
+    bottom: 295px;
+    width: 70px;
+    height: 46px;
+}
+.userInformation {
+    display: flex;
+}
+.evaluate {
+    display: flex;
+}
+.avatar {
+    margin: 40px 20px 20px 20px;
+    width: 72px;
+    height: 72px;
+}
+.name {
+    display: block;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+}
+.city {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+.shortline {
+    margin-left: 30px;
+}
+.evaluate {
+    margin: 80px 0 0 30px;
+}
+.star {
+    width: 24px;
+    height: 24px;
 }
 
 .creat {
@@ -230,8 +378,31 @@
 }
 .right {
     margin: 50px 0 0 0;
-    width: 920px;
-    height: 250px;
+    width: 916px;
+    height: 248px;
+    border-radius: 15px;
+    background: rgba(204, 204, 204, 0.36);
+}
+.part {
+    display: flex;
+}
+.part li {
+    margin: 30px 0 0 100px ;
+}
+h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 80px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+}
+.part span {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+    vertical-align: top;
 }
 
 .bottom {
