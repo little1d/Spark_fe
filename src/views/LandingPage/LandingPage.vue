@@ -1,11 +1,11 @@
 <script setup>
-
+import SportCom from './components/SportCom.vue'
 </script>
 
 <template>
-  <div>landing page</div>
+  <SportCom/>
+  
 </template>
 
 <style scoped>
-
 </style>
