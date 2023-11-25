@@ -23,10 +23,10 @@
     </div>
     <div class="lower">
       <div class="record">
-        <img src="@/assets/Datepage/record.png" alt="" class="record-pic">
+        <img src="@/assets/Datapage/record.png" alt="" class="record-pic">
       </div>
       <div class="trend">
-        <img src="@/assets/Datepage/trend.png" alt="" class="trend-pic">
+        <img src="@/assets/Datapage/trend.png" alt="" class="trend-pic">
       </div>
     </div>
   </div>

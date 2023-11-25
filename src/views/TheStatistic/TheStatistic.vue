@@ -3,7 +3,7 @@
       <SpSidebar/>
       <div class="right">
         <SpHeader/>
-        <MainSection/>
+        <StatisticComponents/>
       </div>
     </div>
   

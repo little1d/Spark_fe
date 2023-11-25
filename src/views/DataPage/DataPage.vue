@@ -3,14 +3,14 @@
       <SpSidebar/>
       <div class="right">
         <SpHeader/>
-        <DateComponents/>
+        <DataComponents/>
       </div>
     </div>
   </template>
   
   <script setup>
   import SpSidebar from "@/components/SpSidebar.vue";
-  import DateComponents from "@/views/DataPage/components/DateComponents.vue";
+  import DataComponents from "@/views/DataPage/components/DataComponents.vue";
   import SpHeader from "../../components/SpHeader.vue";
   </script>
   
