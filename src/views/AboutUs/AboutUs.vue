@@ -1,5 +1,4 @@
 <script setup>
-
 import { ArrowAltCircleRightRegular } from '@vicons/fa'
 import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
 </script>
@@ -53,8 +52,8 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
         </div>
         <!-- 页脚 -->
         <div class="footer">
-            <p class="contactUs">We've been fortunate to work with<br>some amazing partners.<br>If you think we're a good fit, <a href="#">contact<br>us.</a></p>
-            <n-icon size="50px" color="#C4C4C4">
+            <div class="contactUs">We've been fortunate to work with<br>some amazing partners.<br>If you think we're a good fit, <a href="#">contact us.</a></div>
+            <n-icon size="50px" color="#C4C4C4" style="position:absolute; top:150px; right:240px ">
                 <ArrowAltCircleRightRegular/>
             </n-icon>
         </div>

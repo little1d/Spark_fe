@@ -4,7 +4,6 @@ import SportCom from './components/SportCom.vue'
 
 <template>
   <SportCom/>
-  
 </template>
 
 <style scoped>

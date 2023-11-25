@@ -75,11 +75,12 @@ const menuOptions = ref([
   flex-direction: column;
   align-items: center;
   border-radius: 16px;
+}
 
-  .icon {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+
+.icon {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .menu {
@@ -98,9 +99,8 @@ const menuOptions = ref([
   gap: 3rem;
   bottom: 2rem;
   color: #B9B9B9;
-
+}
   .text1 {
     cursor: pointer;
   }
-}
 </style>

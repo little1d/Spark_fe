@@ -168,7 +168,8 @@
 <script setup>
 </script>
 
-<style>
+<style scoped>
+
 .container{
     width: 90vw;
     height: 5000px;
@@ -255,8 +256,8 @@
     height: 72px;
 }
 .substance {
-    font-size: 36px;
-    line-height: 52px;
+    font-size: 28px;
+    line-height: 32px;
     color: rgba(0, 0, 0, 1);
     text-align: left;
 }

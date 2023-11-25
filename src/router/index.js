@@ -21,7 +21,23 @@ const routes = [
     {
         path:'/Statistic',
         component: TheStatistic
-    }
+    },
+    {
+        path:'/DataPage',
+        component: () => import('@/views/DataPage/DataPage.vue'),    
+    },
+    {
+        path:'/MedalPage',
+        component: () => import('@/views/MedalPage/MedalPage.vue'),    
+    },
+    {
+        path:'/TheSetting',
+        component: () => import('@/views/TheSetting/TheSetting.vue'),    
+    },
+    {
+        path:'/PetKeeping',
+        component: () => import('@/views/PetKeeping/PetKeeping.vue'),    
+    },
 ]
 
 const router = createRouter({
