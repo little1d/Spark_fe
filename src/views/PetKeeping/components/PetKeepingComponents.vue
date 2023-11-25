@@ -5,7 +5,7 @@
                 <img src="@/assets/PetKeeping/CheckIn.png" alt="" class="exchange">
             </div>
             <div class="feeding">
-                
+                <img src="@/assets/PetKeeping/feeding.png" alt="" class="feeding-pic">
             </div>
         </div>
         <div class="right-box">
@@ -15,18 +15,19 @@
                     <div class="title">额外任务成就</div>
                 </div>
                 <div class="task">
-                    <p class="acomplishment">1. 完成三日打卡挑战</p>
+                    <p class="acomplishment">1.完成三日打卡挑战</p>
                     <span class="reward">猫粮+1</span>
                 </div>
                 <div class="task">
-                    <p class="acomplishment">2. 完成国庆节竞走活动</p>
+                    <p class="acomplishment">2.完成国庆节竞走活动</p>
                     <span class="reward">猫粮+2</span>
                 </div>
             </div>
             <div class="state">
                 <div class="background">
-                    <img src="@/assets/PetKeeping/cat.png" alt="" class="cat">
+                    <img src="@/assets/PetKeeping/cat.png" alt="" class="cat">   
                 </div>
+                <div class="description">猫猫状态良好，继续保持哦！</div>
             </div>
         </div>
     </div>
@@ -58,10 +59,17 @@
     gap: 40px;
 }
 .feeding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 296px;
     height: 440px;
     background-color: white;
     border-radius: 30px;
+}
+.feeding-pic {
+    width: 280px;
+    height: 420px;
 }
 
 .extra {
@@ -102,8 +110,9 @@
 
 .state {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
     width: 532px;
     height: 440px;
     background-color: white;
@@ -113,14 +122,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 416px;
-    height: 363px;
+    width: 400px;
+    height: 340px;
     border-radius: 15px;
     background: rgba(245, 242, 225, 1);   
 }
 .cat {
     width: 334px;
     height: 277px
+}
+.description {
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(158, 109, 24, 1);
 }
 
 </style>

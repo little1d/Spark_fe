@@ -9,6 +9,14 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
         <!-- 头部导航 -->
         <div class="header">
             <img src="@/assets/AboutUs/logo.png" alt="" class="logo">
+            <div class="navigation">
+                <div class="navigationBar">导航栏</div>
+                <div class="individual">个人中心</div>
+                <div class="productIntroduction">产品介绍</div>
+                <div class="sportCommunity">运动社区</div>
+                <div class="login">登录</div>
+                <div class="register">注册</div>
+            </div>
         </div>
         <!-- 封面 -->
         <div class="cover">
@@ -45,15 +53,32 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
         <div class="conception">
             <span class="EnglishTitle">community concept</span>
             <h3 class="ChineseTitle2">社区理念</h3>
-            <img src="@/assets/AboutUs/community.png" alt="" class="conception-pic">
-            <div class="conceptOne"><h2 class="topic">共同成长</h2><p class="substance">让平台上的用户能够共同成长。通过互相激励、分享经验和完成活动，社区成员可以相互鼓励，达成实现个人的运动目标和提高健康水平的效果</p></div>
-            <div class="conceptTwo"><h2 class="topic">激励奖励</h2><p class="substance">通过激励和奖励机制来推动用户的参与和努力。通过设立挑战、目标达成奖励、排行榜等方式，社区成员可以获得积极的激励，增加参与度和动力。</p></div>
-            <div class="conceptThree"><h2 class="topic">社区建设和互动</h2><p class="substance">希望通过平台上的社交功能，促进用户之间的互动、交流和合作，让运动成为一种有趣和社交的体验。</p></div>
+            <div class="communityConception">
+                <img src="@/assets//AboutUs/conception1.png" alt="" class="conception-pic">
+                <div class="section">
+                    <div class="view">共同成长</div>
+                    <div class="substance">让平台上的用户能够共同成长。通过互相激励、分享经验和完成活动，社区成员可以相互鼓励，达成实现个人的运动目标和提高健康水平的效果</div>
+                </div>
+            </div>
+            <div class="communityConception">
+                <img src="@/assets//AboutUs/conception2.png" alt="" class="conception-pic">
+                <div class="section">
+                    <div class="view">激励奖励</div>
+                    <div class="substance">通过激励和奖励机制来推动用户的参与和努力。通过设立挑战、目标达成奖励、排行榜等方式，社区成员可以获得积极的激励，增加参与度和动力。</div>
+                </div>
+            </div>
+            <div class="communityConception">
+                <img src="@/assets//AboutUs/conception3.png" alt="" class="conception-pic">
+                <div class="section">
+                    <div class="view">社区建设和互动</div>
+                    <div class="substance">希望通过平台上的社交功能，促进用户之间的互动、交流和合作，让运动成为一种有趣和社交的体验。</div>
+                </div>
+            </div>
         </div>
         <!-- 页脚 -->
         <div class="footer">
             <div class="contactUs">We've been fortunate to work with<br>some amazing partners.<br>If you think we're a good fit, <a href="#">contact us.</a></div>
-            <n-icon size="50px" color="#C4C4C4" style="position:absolute; top:150px; right:240px ">
+            <n-icon size="50px" color="#C4C4C4" style="position:absolute; top:150px; right:190px ">
                 <ArrowAltCircleRightRegular/>
             </n-icon>
         </div>
@@ -66,16 +91,26 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
     height: 100vh;
 }
 .header {
-    position: relative;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 80px;
     background: rgba(82, 187, 247, 0.75);
 }
 .logo {
-    position: absolute;
-    margin:25px 0 0 25px;
     width: 180px;
     height: 35px;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 28.96px;
+    color: rgba(0, 0, 0, 1);
 }
 
 .cover {
@@ -177,44 +212,33 @@ li {
 .last {
     margin-right: 110px;
 }
-.conception-pic {
-    margin-top: 40px;
+.communityConception {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
     width: 85%;
-    height: 650px;
 }
-.conceptOne {
-    position: absolute;
-    width: 700px;
+.conception-pic {
+    width: 224px;
     height: 213px;
-    top: 160px;
-    right: 130px;
-    z-index: 2;
 }
-.conceptTwo {
-    position: absolute;
-    width: 700px;
-    height: 213px;
-    top: 390px;
-    right: 130px;
-    z-index: 2;
+.section {
+    padding: 30px;
+    width: 75%;
+    height: 233px;
+    background: rgba(204, 204, 204, 0.3);
+    border-radius: 10px;
 }
-.conceptThree {
-    position: absolute;
-    width: 700px;
-    height: 213px;
-    top: 620px;
-    right: 130px;
-    z-index: 2;
-}
-.topic {
+.view {
+    margin-bottom: 40px;
     font-size: 24px;
-    line-height: 50px;
+    line-height: 35px;
     color: rgba(0, 0, 0, 1);
     text-align: left;
 }
 .substance {
-    margin-top: 20px;
     font-size: 18px;
+    line-height: 30px;
     color: rgba(0, 0, 0, 1);
     text-align: left;
 }

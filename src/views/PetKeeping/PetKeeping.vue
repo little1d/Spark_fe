@@ -9,7 +9,7 @@
 </template>
     
 <script setup>
-import SpHeader from "@/components/SpHeader.vue";
+import SpHeader from "@/views/PetKeeping/components/SpHeader.vue";
 import SpSidebar from "@/components/SpSidebar.vue";
 import MainSection from "@/views/PetKeeping/components/PetKeepingComponents.vue";
 </script>

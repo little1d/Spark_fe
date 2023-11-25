@@ -2,21 +2,24 @@
   <div class="container">
     <div class="left-box">
       <div class="imgBox">
-        <img src="@/assets/cat.png" class="cat">
+        <img src="@/assets/MainSection/cat.png" class="cat">
       </div>
       <div class="goal">
-        <img src="@/assets/goal.png" class="sportsGoal">
+        <img src="@/assets/MainSection/goal.png" class="sportsGoal">
       </div>
     </div>
 
     <div class="right-box">
       <div class="checkIn">
-        <span>今日未打卡</span>
-        <h1>打卡</h1>
+        <div class="unCheckIn">今日未打卡</div>
+        <div class="execute">
+          <img src="@/assets/MainSection/add.png" alt="" class="add">
+          <div class="title">打卡</div>
+        </div>
       </div>
  
       <div class="trend">
-        <img src="@/assets/trend.png" class="spotsTrend">
+        <img src="@/assets/MainSection/trend.png" class="spotsTrend">
       </div>
     </div>
   </div>
@@ -37,7 +40,7 @@ import SpSidebar from "@/components/SpSidebar.vue";
 .left-box {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .right-box {
@@ -51,8 +54,8 @@ import SpSidebar from "@/components/SpSidebar.vue";
   display: flex;
   flex-direction: column;
   justify-items: center;
-  width: 507px;
-  height: 312px;
+  width: 490px;
+  height: 300px;
   border-radius: 15px;
   background: linear-gradient(135deg, rgba(107, 170, 252, 1) 0%, rgba(48, 95, 236, 1) 100%);
   box-shadow: 0px 2px 10px  rgba(175, 137, 255, 0.15);
@@ -63,41 +66,59 @@ import SpSidebar from "@/components/SpSidebar.vue";
 }
 
 .goal{
-  width: 507px;
-  height: 344px;
+  width: 490px;
+  height: 340px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 2px 10px  rgba(175, 137, 255, 0.15);
 }
+.sportsGoal {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
 
 .checkIn{
-  display: flex;
-  width: 453px;
+  width: 440px;
   height: 158px;
   border-radius: 15px;
   background: linear-gradient(135deg, rgba(214, 35, 254, 1) 0%, rgba(165, 48, 242, 1) 100%);
   box-shadow: 0px 2px 10px  rgba(175, 137, 255, 0.15);
 }
-.checkIn span {
-  padding: 10px 0 0 13px;
+.unCheckIn {
+  margin: 10px 0 0 20px;
   font-size: 18px;
   font-weight: 700;
-  line-height: 25px;
   color: rgba(255, 255, 255, 1);
+  text-align: left;
 }
-.checkIn h1 {
+.execute {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.add {
+  width: 84px;
+  height: 84px;
+}
+.title {
   font-size: 60px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
-  line-height: 158px;
+  line-height: 84px;
   color: rgba(255, 255, 255, 1);
 }
 
 .trend{
-  width: 453px;
-  height: 525px;
+  width: 440px;
+  height: 500px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0px 2px 10px  rgba(175, 137, 255, 0.15);
+}
+.spotsTrend {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 </style>

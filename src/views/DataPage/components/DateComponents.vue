@@ -89,11 +89,11 @@ import { EditArrowBack20Filled } from '@vicons/fluent'
 
 .record-pic {
   width: 286px;
-  height: 568px;
+  height: 90%;
 }
 
 .trend-pic {
   width: 583px;
-  height: 568px;
+  height: 90%;
 }
 </style>

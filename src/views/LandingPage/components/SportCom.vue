@@ -3,12 +3,14 @@
         <!-- 头部导航 -->
         <div class="header">
             <img src="@/assets/AboutUs/logo.png" alt="" class="logo">
-            <div>导航栏</div>
-            <a href="#"><div>个人中心</div></a>
-            <a href="#"><div>产品介绍</div></a>
-            <a href="#"><div>运动社区</div></a>
-            <a href="#"><div>登录</div></a>
-            <a href="#"><div>注册</div></a>
+            <div class="navigation">
+                <div class="navigationBar">导航栏</div>
+                <div class="individual">个人中心</div>
+                <div class="productIntroduction">产品介绍</div>
+                <div class="sportCommunity">运动社区</div>
+                <div class="login">登录</div>
+                <div class="register">注册</div>
+            </div>
         </div>
         <!-- 封面 -->
         <div class="cover">
@@ -177,17 +179,26 @@
 }
 
 .header {
+    padding: 15px;
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 80px;
     background: rgba(188, 237, 245, 1);
 }
 .logo {
-    position: absolute;
-    margin:25px 0 0 25px;
     width: 180px;
     height: 35px;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 28.96px;
+    color: rgba(0, 0, 0, 1);
 }
 
 .cover {
@@ -237,10 +248,10 @@
 }
 .product-pic {
     height: 140px;
-    width: 1411px;
+    width: 92%;
 }
 .introduction {
-    width: 1411px;
+    width: 92%;
     height: 541px;
     border-radius: 0px 0px, 32px, 32px;
     background: rgba(229, 229, 229, 1);
@@ -263,6 +274,9 @@
 }
 
 .community {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
     width: 100%;
     height: 904px;
     background: rgba(254, 229, 218, 0.48);
@@ -282,12 +296,13 @@
 }
 .card {
     display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 .user {
     position: relative;
-    margin: 100px 0 0 40px;
-    width: 316px;
-    height: 316px;
+    width: 20%;
+    height: 20%;
     border-radius: 32px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 10px 20px  rgba(0, 0, 0, 0.25);
@@ -295,8 +310,8 @@
 }
 .quotation {
     position: absolute;
-    left: 230px;
-    bottom: 295px;
+    left: 180px;
+    bottom: 230px;
     width: 70px;
     height: 46px;
 }
@@ -370,26 +385,27 @@
 }
 .footer {
     display: flex;
+    justify-content: space-between;
     height: 400px;
+    width: 100%;
 }
 .left {
-    margin: 150px 250px 0 100px ;
+    margin: 150px 0 0 100px ;
     width: 220px;
     height: 40px;
 }
 .right {
     margin: 50px 0 0 0;
-    width: 916px;
+    width: 60%;
     height: 248px;
     border-radius: 15px;
     background: rgba(204, 204, 204, 0.36);
 }
 .part {
     display: flex;
+    justify-content: space-around;
 }
-.part li {
-    margin: 30px 0 0 100px ;
-}
+
 h5 {
     font-size: 24px;
     font-weight: 500;
