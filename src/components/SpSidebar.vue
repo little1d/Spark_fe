@@ -14,8 +14,9 @@
 
 <script setup>
 import renderIcon from "../utils/naive.js";
-
+import {h} from 'vue'
 import {ref} from "vue";
+import {RouterLink} from "vue-router";
 import {
   DashboardOutlined as DashboardIcon,
   DataThresholdingOutlined as DataIcon,
@@ -28,39 +29,101 @@ import {Medal as MedalIcon, BuildingCommunity as CommunityIcon} from "@vicons/ta
 
 const menuOptions = ref([
   {
-    label: "仪表盘",
+    label: () => h(
+        RouterLink,
+        {
+          to: {
+            path: "/",
+            params: {}
+          },
+        },
+        {default: () => "仪表盘"}
+    ),
     key: "dashboard",
     icon: renderIcon(DashboardIcon),
     class: 'menu-item'
   },
   {
-    label: "数据",
+    label: () => h(
+        RouterLink,
+        {
+          to: {
+            path: "/Statistic",
+            params: {}
+          },
+        },
+        {default: () => "数据"}
+    ),
     key: "data",
     icon: renderIcon(DataIcon),
     class: 'menu-item'
   },
   {
-    label: "养宠",
+    label: () => h(
+        RouterLink,
+        {
+          to: {
+            path: "/PetKeeping",
+            params: {}
+          },
+        },
+        {default: () => "养宠"}
+    ),
     key: "pet",
     icon: renderIcon(PetIcon)
   },
   {
-    label: "奖牌",
+    label: () => h(
+        RouterLink,
+        {
+          to: {
+            path: "/MedalPage",
+            params: {}
+          },
+        },
+        {default: () => "奖牌"}
+    ),
     key: "medal",
     icon: renderIcon(MedalIcon)
   },
   {
-    label: "关于",
+    label: () => h(
+        RouterLink,
+        {
+          to: {
+            path: "/AboutUs",
+            params: {}
+          },
+        },
+        {default: () => "关于"}
+    ),
     key: "about",
     icon: renderIcon(InformationIcon)
   },
   {
-    label: "设置",
+    label: () => h(
+        RouterLink,
+        {
+          to: {
+            path: "/TheSetting",
+            params: {}
+          },
+        },
+        {default: () => "设置"}
+    ),
     key: "settings",
     icon: renderIcon(SettingsIcon)
   },
   {
-    label: "前往社区",
+    label: () => h(
+        'a',
+        {
+          href: 'https://sparksports.freeflarum.com/',
+          // 在新的标签页中打开链接
+          target: '_blank'
+        },
+        {default: () => "前往社区"}
+    ),
     key: "community",
     icon: renderIcon(CommunityIcon)
   }
@@ -100,7 +163,8 @@ const menuOptions = ref([
   bottom: 2rem;
   color: #B9B9B9;
 }
-  .text1 {
-    cursor: pointer;
-  }
+
+.text1 {
+  cursor: pointer;
+}
 </style>
