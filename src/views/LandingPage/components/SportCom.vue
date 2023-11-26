@@ -314,8 +314,8 @@
 }
 .quotation {
     position: absolute;
-    left: 180px;
-    bottom: 230px;
+    left: 70%;
+    bottom: 90%;
     width: 70px;
     height: 46px;
 }

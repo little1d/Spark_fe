@@ -50,6 +50,8 @@ import SpSidebar from "@/components/SpSidebar.vue";
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width: 45%;
+    height: 100%;
 }
 .avator {
     margin-right: 40px;
