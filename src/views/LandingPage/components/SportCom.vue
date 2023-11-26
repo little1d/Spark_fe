@@ -127,7 +127,9 @@
         </div>
         <!-- 创作理念 -->
         <div class="creat">
-            <img src="@/assets/Landing/think-big.png" alt="" class="think-big">
+            <div class="brain">
+                <img src="@/assets/Landing/think-big.png" alt="" class="think-big">
+            </div>
             <div class="idea">
                 <h2 class="title">创作理念</h2>
                 <p class="content">我们的创作理念是激发用户的内在动力和积极性。<br> 通过设立个人目标、定期打卡和记录，我们帮助用户建立健康运动习惯，并鼓励他们不断挑战自我、超越自我。</p>
@@ -139,7 +141,9 @@
         </div>
         <!-- 页脚 -->
         <div class="footer">
-            <img src="@/assets/AboutUs/logo.png" alt="" class="left">
+            <div class="icon">
+                <img src="@/assets/AboutUs/logo.png" alt="" class="left">
+            </div>
             <div class="right">
                 <ul class="part">
                     <li>
@@ -174,7 +178,7 @@
 
 .container{
     width: 90vw;
-    height: 5000px;
+    height: 4700px;
     background-image: url(@/assets/Landing/背景@3x.png);
 }
 
@@ -184,7 +188,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 1.7%;
     background: rgba(188, 237, 245, 1);
 }
 .logo {
@@ -204,18 +208,18 @@
 .cover {
     position: relative;
     display: flex;
+    align-items: center;
     width: 100%;
-    height: 900px;
+    height: 19.15%;
     overflow: hidden;
 }
 .running-woman {
-    margin-top: 183px;
     width: 366px;
-    height: 546px
+    height: 546px;
 }
 .heading {
     position: absolute;
-    margin: 250px 0 0 175px;
+    margin-left: 10%;
     width: 889px;
     z-index: 2;
 }
@@ -230,7 +234,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 900px;   
+    height: 19.15%;   
 }
 .EnglishTitle {
     font-size: 20px;
@@ -247,19 +251,19 @@
     color: rgba(39, 36, 68, 1);
 }
 .product-pic {
-    height: 140px;
+    height: 15%;
     width: 92%;
 }
 .introduction {
     width: 92%;
-    height: 541px;
+    height: 60%;
     border-radius: 0px 0px, 32px, 32px;
     background: rgba(229, 229, 229, 1);
     box-shadow: 0px 10px 20px  rgba(0, 0, 0, 0.25);
 }
 .point {
     display: flex;
-    margin-top: 120px;
+    margin-top: 10%;
 }
 .arrow {
     margin: 0 50px 0 50px;
@@ -358,26 +362,38 @@
 .creat {
     display: flex;
     margin-top: 150px;
+    padding-top: 30px;
     width: 100%;
-    height: 1050px;
+    height: 22.34%;
     border-radius: 15px;
     background: rgba(88, 174, 224, 0.44);
 }
+.brain {
+    width: 13%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .think-big {
-    margin: 10px 40px 0 40px;
     width: 100px;
     height: 100px;
+}
+.idea {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .title {
     font-size: 50px;
     font-weight: 900;
     letter-spacing: 1.4px;
-    line-height: 120px;
     color: rgba(0, 0, 0, 1);
     text-align: left;
 }
 .content {
-    margin: 40px 100px 40px 0;
     font-size: 24px;
     line-height: 35px;
     color: rgba(0, 0, 0, 1);
@@ -386,24 +402,32 @@
 .footer {
     display: flex;
     justify-content: space-between;
-    height: 400px;
+    align-items: center;
+    height: 8.5%;
     width: 100%;
 }
+.icon {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .left {
-    margin: 150px 0 0 100px ;
     width: 220px;
     height: 40px;
 }
 .right {
-    margin: 50px 0 0 0;
+    display: flex;
     width: 60%;
-    height: 248px;
+    height: 60%;
     border-radius: 15px;
     background: rgba(204, 204, 204, 0.36);
 }
 .part {
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 h5 {
@@ -423,15 +447,18 @@ h5 {
 }
 
 .bottom {
-    height: 100px;
+    width: 100%;
+    height: 2.13%;
 }
 .filings {
     display: block;
-    margin: 100px 0 0 100px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
     font-weight: 900;
-    line-height: 25px;
     color: rgba(0, 0, 0, 1);
-    text-align: left;
 }
 </style>

@@ -115,19 +115,18 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
 
 .cover {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 517px;
 }
 .cover-pic{
-    position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 1px 1px, 58px, 31px;
 }
 .cover .theme {
     position: absolute;
-    margin-top: 137px;
-    margin-left: 200px;
     width: 929px;
     height: 244px;
     z-index: 2;
@@ -156,9 +155,10 @@ ul {
 li {
     display: flex;
     flex-grow: 1;
+    align-items: center;
 }
 .title {
-    margin: 40px 40px 0 60px;
+    margin: 0 3% 0 5%;
     width: 120px;
     height: 51px;
     border-radius: 6px;
@@ -169,7 +169,6 @@ li {
 }
 .content {
     font-size: 16px;
-    line-height: 127px;
     color: rgba(0, 0, 0, 1);
 }
 
