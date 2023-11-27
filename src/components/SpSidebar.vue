@@ -118,7 +118,7 @@ const menuOptions = ref([
     label: () => h(
         'a',
         {
-          href: 'https://sparksports.freeflarum.com/',
+          href: 'https://sports.kites262.top/',
           // 在新的标签页中打开链接
           target: '_blank'
         },
