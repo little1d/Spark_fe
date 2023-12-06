@@ -118,7 +118,7 @@ const menuOptions = ref([
     label: () => h(
         'a',
         {
-          href: 'https://sports.kites262.top/',
+          href: 'https://bbs.spark.xuanxi.me/',
           // 在新的标签页中打开链接
           target: '_blank'
         },
