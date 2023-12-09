@@ -76,16 +76,16 @@ const handleSubmit = async (event) => {
   // 获取表单元素的值
   const userid = document.querySelector('.userid').value;
   const password = document.querySelector('.password').value;
-  const sportType = document.querySelector('.sportTypeSelect').value;
-  const sportDate = document.querySelector('.data').value;
-  const sportDuration = document.querySelector('.duration').value;
+  const type = document.querySelector('.sportTypeSelect').value;
+  const date = document.querySelector('.data').value;
+  const duration = document.querySelector('.duration').value;
   // 创建一个对象来存储表单数据
   const formData = {
     userid,
     password,
-    sportType,
-    sportDate,
-    sportDuration
+    type,
+    date,
+    duration
   };
   // 将表单数据存储到本地存储中
   localStorage.setItem('formData', JSON.stringify(formData));
