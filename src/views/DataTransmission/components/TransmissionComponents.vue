@@ -32,7 +32,7 @@
       <button class="close-button" @click="closePopup">关闭</button>
       <!-- 其他弹窗内容 -->
       <div class="popup-container">
-        <form action="" method="get" class="info" autocomplete="off" @submit="handleSubmit">
+        <form action="" method="post" class="info" autocomplete="off" @submit="handleSubmit">
           <div class="motionData">数据上传</div>
           <div class="sportType prompt">运动类型选择：</div>
           <select class="sportTypeSelect select">
@@ -74,7 +74,7 @@ const closePopup = () => {
   isPopupOpen.value = false;
 };
 // 监听表单提交事件
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
   event.preventDefault(); // 阻止表单默认提交行为
   // 获取表单元素的值
   const sportType = document.querySelector('.sportTypeSelect').value;
@@ -90,11 +90,34 @@ const handleSubmit = (event) => {
   };
   // 将表单数据存储到本地存储中
   localStorage.setItem('formData', JSON.stringify(formData));
-  // 清空表单输入
-  document.querySelector('.sportTypeSelect').value = '';
-  document.querySelector('.data').value = '';
-  document.querySelector('.duration').value = '';
-  document.querySelector('.sportSensationSelect').value = '';
+  try {
+    // 发送POST请求给后端API
+    const response = await fetch('https://example.com/api/endpoint', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      // 请求成功处理
+      console.log('数据发送成功');
+      // 清空表单输入
+      document.querySelector('.sportTypeSelect').value = '';
+      document.querySelector('.data').value = '';
+      document.querySelector('.duration').value = '';
+      document.querySelector('.sportSensationSelect').value = '';
+      // 关闭弹窗
+      closePopup();
+    } else {
+      // 请求失败处理
+      console.error('数据发送失败');
+    }
+  } catch (error) {
+    // 错误处理
+    console.error('发生错误', error);
+  }
 };
 </script>
 

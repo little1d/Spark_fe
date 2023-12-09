@@ -29,10 +29,10 @@
     <!-- 弹窗内容 -->
     <div class="popup-content">
       <!-- 弹窗关闭按钮 -->
-      <button class="close-button" @click="closePopup">关闭</button>
+      <img src="@/assets/MainSection/close.png" alt="" class="close" @click="closePopup">
       <!-- 其他弹窗内容 -->
       <div class="popup-container">
-        <form action="" method="get" class="info" autocomplete="off" @submit="handleSubmit">
+        <form action="https://api.kites262.top" method="post" class="info" autocomplete="off" @submit="handleSubmit">
           <div class="motionData">数据上传</div>
           <div class="sportType prompt">运动类型选择：</div>
           <select class="sportTypeSelect select">
@@ -42,6 +42,7 @@
             <option value="羽毛球">羽毛球</option>
             <option value="滑板">滑板</option>
             <option value="游泳">游泳</option>
+            <option disabled selected value="">请选择</option>
           </select>
           <div class="sportData prompt">运动日期：</div>
           <input type="text" class="data text">
@@ -49,10 +50,11 @@
           <input type="text" class="duration text">
           <div class="sportSensation prompt">运动感受：</div>
           <select class="sportSensationSelect select">
-            <option value="满意">满意</option>
-            <option value="良好">良好</option>
-            <option value="一般">一般</option>
-            <option value="失望">失望</option>
+            <option value="非常好">非常好</option>
+            <option value="还不错">还不错</option>
+            <option value="一般般">一般般</option>
+            <option value="有点累">有点累</option>
+            <option disabled selected value="">请选择</option>
           </select>
           <button class="btn">提交打卡</button>
         </form>
@@ -74,7 +76,7 @@ const closePopup = () => {
   isPopupOpen.value = false;
 };
 // 监听表单提交事件
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
   event.preventDefault(); // 阻止表单默认提交行为
   // 获取表单元素的值
   const sportType = document.querySelector('.sportTypeSelect').value;
@@ -90,11 +92,34 @@ const handleSubmit = (event) => {
   };
   // 将表单数据存储到本地存储中
   localStorage.setItem('formData', JSON.stringify(formData));
-  // 清空表单输入
-  document.querySelector('.sportTypeSelect').value = '';
-  document.querySelector('.data').value = '';
-  document.querySelector('.duration').value = '';
-  document.querySelector('.sportSensationSelect').value = '';
+  try {
+    // 发送POST请求给后端API
+    const response = await fetch('https://api.kites262.top', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      // 请求成功处理
+      console.log('数据发送成功');
+      // 清空表单输入
+      document.querySelector('.sportTypeSelect').value = '';
+      document.querySelector('.data').value = '';
+      document.querySelector('.duration').value = '';
+      document.querySelector('.sportSensationSelect').value = '';
+      // 关闭弹窗
+      closePopup();
+    } else {
+      // 请求失败处理
+      console.error('数据发送失败');
+    }
+  } catch (error) {
+    // 错误处理
+    console.error('发生错误', error);
+  }
 };
 </script>
 
@@ -174,6 +199,10 @@ const handleSubmit = (event) => {
   height: 84px;
 }
 
+.add:hover {
+  cursor: pointer;
+}
+
 .title {
   font-size: 60px;
   font-weight: 500;
@@ -209,19 +238,19 @@ const handleSubmit = (event) => {
 }
 
 .popup-content {
+  position: relative;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.close-button {
+.close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
   cursor: pointer;
-  font-size: 16px;
+  height: 30px;
+  z-index: 2;
+  top: 2rem;
+  right: 2rem;
 }
 
 .popup-container {
@@ -267,5 +296,6 @@ const handleSubmit = (event) => {
   height: 53px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 1);
+  font-size: 18px;
 }
 </style>
