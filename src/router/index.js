@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
@@ -28,6 +28,10 @@ const routes = [
     {
         path: '/PetKeeping',
         component: () => import('@/views/PetKeeping/PetKeeping.vue'),
+    },
+    {
+        path: '/DataTransmission',
+        component: () => import('@/views/DataTransmission/DataTransmission.vue')
     },
 ]
 

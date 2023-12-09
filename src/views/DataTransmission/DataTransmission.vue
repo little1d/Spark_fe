@@ -3,14 +3,14 @@
     <SpSidebar />
     <div class="right">
       <SpHeader />
-      <MainSection />
+      <TransmissionComponents />
     </div>
   </div>
 </template>
 
 <script setup>
 import SpSidebar from "@/components/SpSidebar.vue";
-import MainSection from "@/views/TheDashboard/components/MainSection.vue";
+import TransmissionComponents from "@/views/DataTransmission/components/TransmissionComponents.vue";
 import SpHeader from "../../components/SpHeader.vue";
 </script>
 
