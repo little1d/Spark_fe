@@ -23,7 +23,6 @@
       </div>
     </div>
   </div>
-
   <!-- 弹窗组件 -->
   <div v-if="isPopupOpen" class="popup">
     <!-- 弹窗内容 -->
@@ -34,6 +33,10 @@
       <div class="popup-container">
         <form action="https://api.kites262.top" method="post" class="info" autocomplete="off" @submit="handleSubmit">
           <div class="motionData">数据上传</div>
+          <div class="useridInput prompt">用户名输入：</div>
+          <input type="text" class="userid select" placeholder="用户名为学号/工资号">
+          <div class="passwordInput prompt">密码输入:</div>
+          <input type="password" class="password select">
           <div class="sportType prompt">运动类型选择：</div>
           <select class="sportTypeSelect select">
             <option value="跑步">跑步</option>
@@ -45,17 +48,9 @@
             <option disabled selected value="">请选择</option>
           </select>
           <div class="sportData prompt">运动日期：</div>
-          <input type="text" class="data text">
+          <input type="text" class="data select">
           <div class="sportDuration prompt">运动时长：</div>
-          <input type="text" class="duration text">
-          <div class="sportSensation prompt">运动感受：</div>
-          <select class="sportSensationSelect select">
-            <option value="非常好">非常好</option>
-            <option value="还不错">还不错</option>
-            <option value="一般般">一般般</option>
-            <option value="有点累">有点累</option>
-            <option disabled selected value="">请选择</option>
-          </select>
+          <input type="text" class="duration select">
           <button class="btn">提交打卡</button>
         </form>
       </div>
@@ -79,16 +74,18 @@ const closePopup = () => {
 const handleSubmit = async (event) => {
   event.preventDefault(); // 阻止表单默认提交行为
   // 获取表单元素的值
+  const userid = document.querySelector('.userid').value;
+  const password = document.querySelector('.password').value;
   const sportType = document.querySelector('.sportTypeSelect').value;
   const sportDate = document.querySelector('.data').value;
   const sportDuration = document.querySelector('.duration').value;
-  const sportSensation = document.querySelector('.sportSensationSelect').value;
   // 创建一个对象来存储表单数据
   const formData = {
+    userid,
+    password,
     sportType,
     sportDate,
-    sportDuration,
-    sportSensation
+    sportDuration
   };
   // 将表单数据存储到本地存储中
   localStorage.setItem('formData', JSON.stringify(formData));
@@ -106,10 +103,11 @@ const handleSubmit = async (event) => {
       // 请求成功处理
       console.log('数据发送成功');
       // 清空表单输入
+      document.querySelector('.userid').value = '';
+      document.querySelector('.password').value = '';
       document.querySelector('.sportTypeSelect').value = '';
       document.querySelector('.data').value = '';
       document.querySelector('.duration').value = '';
-      document.querySelector('.sportSensationSelect').value = '';
       // 关闭弹窗
       closePopup();
     } else {
@@ -121,6 +119,7 @@ const handleSubmit = async (event) => {
     console.error('发生错误', error);
   }
 };
+
 </script>
 
 <style scoped>
@@ -240,7 +239,7 @@ const handleSubmit = async (event) => {
 .popup-content {
   position: relative;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 36px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -255,8 +254,8 @@ const handleSubmit = async (event) => {
 
 .popup-container {
   padding: 2rem;
-  width: 320px;
-  height: 547px;
+  width: 420px;
+  height: 647px;
   border-radius: 36px;
   background: rgba(248, 247, 252, 1);
 }
@@ -274,20 +273,15 @@ const handleSubmit = async (event) => {
 }
 
 .prompt {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(24, 103, 214, 1);
   text-align: left;
 }
 
 .select {
-  width: 231px;
-  height: 32px;
-  border-radius: 5px;
-}
-
-.text {
-  width: 132px;
-  height: 30px;
+  padding: 0 10px;
+  width: 331px;
+  height: 36px;
   border-radius: 5px;
 }
 

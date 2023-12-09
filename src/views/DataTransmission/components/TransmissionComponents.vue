@@ -29,10 +29,10 @@
     <!-- 弹窗内容 -->
     <div class="popup-content">
       <!-- 弹窗关闭按钮 -->
-      <button class="close-button" @click="closePopup">关闭</button>
+      <img src="@/assets/MainSection/close.png" alt="" class="close" @click="closePopup">
       <!-- 其他弹窗内容 -->
       <div class="popup-container">
-        <form action="" method="post" class="info" autocomplete="off" @submit="handleSubmit">
+        <form action="https://api.kites262.top" method="post" class="info" autocomplete="off" @submit="handleSubmit">
           <div class="motionData">数据上传</div>
           <div class="sportType prompt">运动类型选择：</div>
           <select class="sportTypeSelect select">
@@ -42,6 +42,7 @@
             <option value="羽毛球">羽毛球</option>
             <option value="滑板">滑板</option>
             <option value="游泳">游泳</option>
+            <option disabled selected value="">请选择</option>
           </select>
           <div class="sportData prompt">运动日期：</div>
           <input type="text" class="data text">
@@ -49,10 +50,11 @@
           <input type="text" class="duration text">
           <div class="sportSensation prompt">运动感受：</div>
           <select class="sportSensationSelect select">
-            <option value="满意">满意</option>
-            <option value="良好">良好</option>
-            <option value="一般">一般</option>
-            <option value="失望">失望</option>
+            <option value="非常好">非常好</option>
+            <option value="还不错">还不错</option>
+            <option value="一般般">一般般</option>
+            <option value="有点累">有点累</option>
+            <option disabled selected value="">请选择</option>
           </select>
           <button class="btn">提交打卡</button>
         </form>
@@ -92,7 +94,7 @@ const handleSubmit = async (event) => {
   localStorage.setItem('formData', JSON.stringify(formData));
   try {
     // 发送POST请求给后端API
-    const response = await fetch('https://example.com/api/endpoint', {
+    const response = await fetch('https://api.kites262.top', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -197,6 +199,10 @@ const handleSubmit = async (event) => {
   height: 84px;
 }
 
+.add:hover {
+  cursor: pointer;
+}
+
 .title {
   font-size: 60px;
   font-weight: 500;
@@ -232,19 +238,19 @@ const handleSubmit = async (event) => {
 }
 
 .popup-content {
+  position: relative;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.close-button {
+.close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
   cursor: pointer;
-  font-size: 16px;
+  height: 30px;
+  z-index: 2;
+  top: 2rem;
+  right: 2rem;
 }
 
 .popup-container {
@@ -290,5 +296,6 @@ const handleSubmit = async (event) => {
   height: 53px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 1);
+  font-size: 18px;
 }
 </style>

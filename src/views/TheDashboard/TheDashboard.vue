@@ -12,6 +12,7 @@
 import SpSidebar from "@/components/SpSidebar.vue";
 import MainSection from "@/views/TheDashboard/components/MainSection.vue";
 import SpHeader from "../../components/SpHeader.vue";
+import SettingComponents from "@/views/TheSetting/components/SettingComponents.vue";
 </script>
 
 <style scoped>
