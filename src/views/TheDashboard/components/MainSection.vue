@@ -48,7 +48,7 @@
             <option disabled selected value="">请选择</option>
           </select>
           <div class="sportData prompt">运动日期：</div>
-          <input type="text" class="data select">
+          <div class="data">{{ currentTime }}</div>
           <div class="sportDuration prompt">运动时长：</div>
           <input type="text" class="duration select">
           <button class="btn">提交打卡</button>
@@ -60,8 +60,15 @@
 
 <script setup>
 import { ref } from 'vue'; // 导入需要的模块或变量
+// 创建一个响应式变量来表示当前时间
+const currentTime = ref('');
 // 创建一个响应式变量来表示弹窗的显示状态
 const isPopupOpen = ref(false);
+// 获取当前时间
+const currentDate = new Date();
+const currentTimeString = currentDate.toLocaleString();
+// 将当前时间赋值给响应式变量
+currentTime.value = currentTimeString;
 // 点击事件处理函数
 const handleAddClick = () => {
   isPopupOpen.value = true;
@@ -75,14 +82,12 @@ const handleSubmit = async (event) => {
   event.preventDefault(); // 阻止表单默认提交行为
   // 获取表单元素的值
   const userid = document.querySelector('.userid').value;
-  const password = document.querySelector('.password').value;
   const type = document.querySelector('.sportTypeSelect').value;
-  const date = document.querySelector('.data').value;
+  const date = document.querySelector('.data').textContent;
   const duration = document.querySelector('.duration').value;
   // 创建一个对象来存储表单数据
   const formData = {
     userid,
-    password,
     type,
     date,
     duration
@@ -106,7 +111,6 @@ const handleSubmit = async (event) => {
       document.querySelector('.userid').value = '';
       document.querySelector('.password').value = '';
       document.querySelector('.sportTypeSelect').value = '';
-      document.querySelector('.data').value = '';
       document.querySelector('.duration').value = '';
       // 关闭弹窗
       closePopup();
@@ -119,7 +123,6 @@ const handleSubmit = async (event) => {
     console.error('发生错误', error);
   }
 };
-
 </script>
 
 <style scoped>
@@ -283,6 +286,16 @@ const handleSubmit = async (event) => {
   width: 331px;
   height: 36px;
   border-radius: 5px;
+}
+
+.data {
+  padding: 8px 10px;
+  width: 331px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .btn {
