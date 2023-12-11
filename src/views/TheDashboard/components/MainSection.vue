@@ -67,8 +67,19 @@ const isPopupOpen = ref(false);
 // 获取当前时间
 const currentDate = new Date();
 const currentTimeString = currentDate.toLocaleString();
+// 将时间字符串转换为 Date 对象
+const Time = new Date(currentTimeString);
+// 获取年、月、日、小时、分钟和秒
+const year = Time.getFullYear();
+const month = (Time.getMonth() + 1).toString().padStart(2, '0');
+const day = Time.getDate().toString().padStart(2, '0');
+const hours = Time.getHours().toString().padStart(2, '0');
+const minutes = Time.getMinutes().toString().padStart(2, '0');
+const seconds = Time.getSeconds().toString().padStart(2, '0');
+// 格式化为指定形式的时间字符串
+const formattedTime = `${year}-${month}-${day}_${hours}:${minutes}:${seconds}`;
 // 将当前时间赋值给响应式变量
-currentTime.value = currentTimeString;
+currentTime.value = formattedTime;
 // 点击事件处理函数
 const handleAddClick = () => {
   isPopupOpen.value = true;
@@ -96,7 +107,7 @@ const handleSubmit = async (event) => {
   localStorage.setItem('formData', JSON.stringify(formData));
   try {
     // 发送POST请求给后端API
-    const response = await fetch('https://api.kites262.top', {
+    const response = await fetch('https://api.xuanxi.me', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
