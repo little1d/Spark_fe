@@ -31,7 +31,7 @@
       <img src="@/assets/MainSection/close.png" alt="" class="close" @click="closePopup">
       <!-- 其他弹窗内容 -->
       <div class="popup-container">
-        <form action="https://api.kites262.top" method="post" class="info" autocomplete="off" @submit="handleSubmit">
+        <form action="https://api.xuanxi.me" method="post" class="info" autocomplete="off" @submit="handleSubmit">
           <div class="motionData">数据上传</div>
           <div class="useridInput prompt">用户名输入：</div>
           <input type="text" class="userid select" placeholder="用户名为学号/工资号">
