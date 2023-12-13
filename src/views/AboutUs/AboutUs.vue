@@ -4,7 +4,7 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
 </script>
 
 <template>
-    <TeamInformation/>
+    <TeamInformation />
     <div class="container">
         <!-- 头部导航 -->
         <div class="header">
@@ -31,7 +31,7 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
                 <img src="@/assets//AboutUs/team3.png" alt="" class="team-pic">
                 <img src="@/assets//AboutUs/team2.png" alt="" class="team-pic last">团队信息
             </h3>
-            
+
             <div class="specificInformation">
                 <ul>
                     <li>
@@ -77,19 +77,21 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
         </div>
         <!-- 页脚 -->
         <div class="footer">
-            <div class="contactUs">We've been fortunate to work with<br>some amazing partners.<br>If you think we're a good fit, <a href="#">contact us.</a></div>
-            <n-icon size="50px" color="#C4C4C4" style="position:absolute; top:150px; right:190px ">
-                <ArrowAltCircleRightRegular/>
+            <div class="contactUs">We've been fortunate to work with<br>some amazing partners.<br>If you think we're a good
+                fit, <a href="#">contact us.</a></div>
+            <n-icon size="50px" color="#C4C4C4" style="position:absolute; top:150px; right:180px ">
+                <ArrowAltCircleRightRegular />
             </n-icon>
         </div>
     </div>
 </template>
 
 <style scoped>
-.container{
-    width: 90vw;
+.container {
+    width: 100%;
     height: 100vh;
 }
+
 .header {
     padding: 15px;
     display: flex;
@@ -99,10 +101,12 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
     height: 80px;
     background: rgba(82, 187, 247, 0.75);
 }
+
 .logo {
     width: 180px;
     height: 35px;
 }
+
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -121,10 +125,12 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
     width: 100%;
     height: 517px;
 }
-.cover-pic{
+
+.cover-pic {
     width: 100%;
     height: 100%;
 }
+
 .cover .theme {
     position: absolute;
     width: 929px;
@@ -139,6 +145,7 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
     margin-top: 60px;
     width: 100%;
 }
+
 .specificInformation {
     margin-top: 40px;
     width: 90%;
@@ -146,17 +153,20 @@ import TeamInformation from "@/views/AboutUs/components/TeamInformation.vue";
     background: rgba(166, 166, 166, 0.06);
     border-radius: 30px;
 }
+
 ul {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     height: 100%;
 }
+
 li {
     display: flex;
     flex-grow: 1;
     align-items: center;
 }
+
 .title {
     margin: 0 3% 0 5%;
     width: 120px;
@@ -167,6 +177,7 @@ li {
     line-height: 51px;
     color: rgba(0, 0, 0, 1);
 }
+
 .content {
     font-size: 16px;
     color: rgba(0, 0, 0, 1);
@@ -180,6 +191,7 @@ li {
     margin-top: 60px;
     width: 100%;
 }
+
 .EnglishTitle {
     font-size: 20px;
     font-weight: 600;
@@ -187,6 +199,7 @@ li {
     line-height: 28px;
     color: rgba(38, 150, 255, 1);
 }
+
 .ChineseTitle1 {
     display: flex;
     width: 700px;
@@ -196,6 +209,7 @@ li {
     line-height: 70px;
     color: rgba(39, 36, 68, 1);
 }
+
 .ChineseTitle2 {
     font-size: 56px;
     font-weight: 700;
@@ -203,24 +217,29 @@ li {
     line-height: 70px;
     color: rgba(39, 36, 68, 1);
 }
+
 .team-pic {
     margin: 50px 30px 0 0;
     width: 20px;
     height: 20px;
 }
+
 .last {
     margin-right: 110px;
 }
+
 .communityConception {
     display: flex;
     justify-content: space-between;
     margin: 20px 0 20px 0;
     width: 85%;
 }
+
 .conception-pic {
     width: 224px;
     height: 213px;
 }
+
 .section {
     padding: 30px;
     width: 75%;
@@ -228,6 +247,7 @@ li {
     background: rgba(204, 204, 204, 0.3);
     border-radius: 10px;
 }
+
 .view {
     margin-bottom: 40px;
     font-size: 24px;
@@ -235,6 +255,7 @@ li {
     color: rgba(0, 0, 0, 1);
     text-align: left;
 }
+
 .substance {
     font-size: 18px;
     line-height: 30px;
@@ -249,8 +270,9 @@ li {
     height: 417px;
     opacity: 1;
     background: linear-gradient(180deg, rgba(76, 197, 224, 0.08) 35.07%, rgba(76, 197, 224, 1) 100%);
-    box-shadow: 0px 2px 4px  rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
+
 .contactUs {
     position: absolute;
     margin-top: 26px;
@@ -261,6 +283,7 @@ li {
     color: rgba(66, 94, 143, 1);
     text-align: left;
 }
+
 .contactUs a {
     font-size: 48px;
     font-weight: 300;
